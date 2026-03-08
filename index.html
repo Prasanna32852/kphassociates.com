@@ -396,7 +396,7 @@
     const form = e.target, btn = form.querySelector('.btn-submit'), succ = document.getElementById('formSuccess');
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…'; btn.disabled = true;
     try {
-      const res = await fetch('https://formspree.io/f/https://formspree.io/f/mpqywbab', { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+      const res = await fetch('https://formspree.io/f/mpqywbab', { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
       if (res.ok) { form.reset(); succ.style.display='block'; btn.style.display='none'; }
       else { const j = await res.json(); btn.innerHTML='<i class="fas fa-exclamation-circle"></i> '+(j.errors?j.errors.map(x=>x.message).join(', '):'Error, try again.'); btn.disabled=false; }
     } catch { btn.innerHTML='<i class="fas fa-exclamation-circle"></i> Network error. Try again.'; btn.disabled=false; }
