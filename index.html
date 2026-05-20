@@ -4,47 +4,49 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>KPH AND ASSOCIATES | Chartered Accountants – Bengaluru</title>
-  <meta name="description" content="KPH AND ASSOCIATES – Trusted Chartered Accountants in Bengaluru. Expert Income Tax, GST, Audit, Company Registration & Accounting services."/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <meta name="description" content="KPH AND ASSOCIATES – Trusted Chartered Accountants in Bengaluru. Expert Income Tax, GST, Audit, Company Registration, Compliance & Advisory services."/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy:#080f1a; --navy-2:#0d1b2e; --navy-3:#112340;
-      --gold:#c8a45a; --gold-2:#ddb96a; --gold-3:#f0d090;
-      --white:#ffffff; --off-white:#f9f8f5; --light-grey:#f2f1ee;
-      --text:#1a1a2e; --text-2:#4a5568; --text-3:#718096; --border:#e8e4dc;
+      --navy:#070e1c; --navy-2:#0b1729; --navy-3:#0f2040;
+      --gold:#c9a85c; --gold-2:#dfc07a; --gold-3:#f2d898;
+      --gold-soft:rgba(201,168,92,.12);
+      --white:#ffffff; --off-white:#f8f7f3; --light-grey:#f1efe9;
+      --text:#141428; --text-2:#3d4a5c; --text-3:#6b7a8d; --border:#e4dfd4;
+      --card-shadow: 0 2px 20px rgba(0,0,0,.06);
     }
     html { scroll-behavior: smooth; }
-    body { font-family:'Inter',sans-serif; color:var(--text); background:var(--white); line-height:1.7; overflow-x:hidden; }
+    body { font-family:'DM Sans',sans-serif; color:var(--text); background:var(--white); line-height:1.7; overflow-x:hidden; }
     ::-webkit-scrollbar { width:5px; }
     ::-webkit-scrollbar-track { background:var(--navy); }
     ::-webkit-scrollbar-thumb { background:var(--gold); border-radius:3px; }
 
-    /* TICKER */
-    #ticker-bar { position:fixed; top:0; left:0; right:0; z-index:1100; background:var(--navy); border-bottom:1px solid rgba(200,164,90,.3); display:flex; align-items:center; height:32px; }
-    .ticker-label { display:flex; align-items:center; gap:6px; background:var(--gold); color:var(--navy); padding:0 14px; height:100%; min-width:fit-content; font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; white-space:nowrap; flex-shrink:0; }
+    /* ── TICKER ── */
+    #ticker-bar { position:fixed; top:0; left:0; right:0; z-index:1100; background:var(--navy); border-bottom:1px solid rgba(201,168,92,.2); display:flex; align-items:center; height:32px; }
+    .ticker-label { display:flex; align-items:center; gap:6px; background:var(--gold); color:var(--navy); padding:0 14px; height:100%; min-width:fit-content; font-size:9.5px; font-weight:800; letter-spacing:2.5px; text-transform:uppercase; white-space:nowrap; flex-shrink:0; }
     .ticker-track-wrap { flex:1; overflow:hidden; height:100%; }
-    .ticker-track { display:flex; align-items:center; white-space:nowrap; height:100%; animation:tscroll 60s linear infinite; }
+    .ticker-track { display:flex; align-items:center; white-space:nowrap; height:100%; animation:tscroll 65s linear infinite; }
     .ticker-track:hover { animation-play-state:paused; }
     @keyframes tscroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-    .ticker-item { display:inline-flex; align-items:center; gap:7px; padding:0 22px; font-size:11.5px; color:rgba(255,255,255,.8); border-right:1px solid rgba(255,255,255,.07); text-decoration:none; transition:color .2s; }
+    .ticker-item { display:inline-flex; align-items:center; gap:7px; padding:0 22px; font-size:11px; color:rgba(255,255,255,.75); border-right:1px solid rgba(255,255,255,.06); text-decoration:none; transition:color .2s; }
     .ticker-item:hover { color:var(--gold); }
-    .ticker-tag { font-size:9px; font-weight:800; letter-spacing:1px; padding:2px 6px; border-radius:3px; flex-shrink:0; }
+    .ticker-tag { font-size:8.5px; font-weight:800; letter-spacing:1px; padding:2px 6px; border-radius:3px; flex-shrink:0; }
     .tag-it  { background:#1a5fa3; color:#fff; }
     .tag-gst { background:#b32d2d; color:#fff; }
     .tag-mca { background:#1e7e34; color:#fff; }
 
-    /* NAVBAR */
-    nav { position:fixed; top:32px; left:0; right:0; z-index:1000; display:flex; align-items:center; justify-content:space-between; padding:0 6%; height:72px; background:rgba(8,15,26,.97); backdrop-filter:blur(12px); border-bottom:1px solid rgba(200,164,90,.18); transition:all .3s; }
+    /* ── NAVBAR ── */
+    nav { position:fixed; top:32px; left:0; right:0; z-index:1000; display:flex; align-items:center; justify-content:space-between; padding:0 6%; height:70px; background:rgba(7,14,28,.96); backdrop-filter:blur(16px); border-bottom:1px solid rgba(201,168,92,.14); transition:all .3s; }
     nav.scrolled { box-shadow:0 4px 40px rgba(0,0,0,.5); }
-    .nav-logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
-    .logo-mark { width:46px; height:46px; background:linear-gradient(135deg,var(--gold),var(--gold-2)); border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:700; color:var(--navy); }
-    .firm-name { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:700; color:var(--white); letter-spacing:.5px; }
-    .firm-sub  { font-size:9.5px; color:var(--gold); letter-spacing:2.5px; text-transform:uppercase; margin-top:1px; }
-    .icai-nav  { height:40px; width:auto; margin-left:14px; object-fit:contain; }
-    .nav-links { display:flex; align-items:center; gap:34px; list-style:none; }
-    .nav-links a { color:rgba(255,255,255,.72); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:.4px; transition:color .2s; position:relative; }
+    .nav-logo { display:flex; align-items:center; gap:13px; text-decoration:none; }
+    .logo-mark { width:44px; height:44px; background:linear-gradient(135deg,var(--gold),var(--gold-2)); border-radius:9px; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:700; color:var(--navy); }
+    .firm-name { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:700; color:var(--white); letter-spacing:.4px; }
+    .firm-sub  { font-size:9px; color:var(--gold); letter-spacing:2.5px; text-transform:uppercase; margin-top:1px; }
+    .icai-nav  { height:38px; width:auto; margin-left:12px; object-fit:contain; }
+    .nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+    .nav-links a { color:rgba(255,255,255,.68); text-decoration:none; font-size:13px; font-weight:500; letter-spacing:.3px; transition:color .2s; position:relative; }
     .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:1px; background:var(--gold); transform:scaleX(0); transition:transform .25s; }
     .nav-links a:hover { color:var(--gold); }
     .nav-links a:hover::after { transform:scaleX(1); }
@@ -53,144 +55,160 @@
     .nav-cta::after { display:none !important; }
     .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
     .hamburger span { display:block; width:24px; height:2px; background:var(--white); transition:all .3s; }
-    .mobile-menu { display:none; position:fixed; top:104px; left:0; right:0; background:var(--navy-2); padding:20px 6%; border-top:1px solid rgba(200,164,90,.15); z-index:999; }
+    .mobile-menu { display:none; position:fixed; top:102px; left:0; right:0; background:var(--navy-2); padding:20px 6%; border-top:1px solid rgba(201,168,92,.14); z-index:999; }
     .mobile-menu.open { display:block; }
-    .mobile-menu a { display:block; padding:12px 0; color:rgba(255,255,255,.8); text-decoration:none; font-size:15px; border-bottom:1px solid rgba(255,255,255,.06); }
+    .mobile-menu a { display:block; padding:12px 0; color:rgba(255,255,255,.78); text-decoration:none; font-size:15px; border-bottom:1px solid rgba(255,255,255,.05); }
     .mobile-menu a:hover { color:var(--gold); }
 
-    /* HERO */
+    /* ── HERO ── */
     #hero { min-height:100vh; background:var(--navy); display:flex; align-items:center; padding:172px 6% 100px; position:relative; overflow:hidden; }
-    .hero-bg::before,.hero-bg::after { content:''; position:absolute; border-radius:50%; border:1px solid rgba(200,164,90,.05); pointer-events:none; }
-    .hero-bg::before { width:800px; height:800px; top:-200px; right:-200px; }
-    .hero-bg::after  { width:500px; height:500px; bottom:-100px; left:-100px; }
-    .hero-glow { position:absolute; top:0; right:0; bottom:0; width:55%; background:radial-gradient(ellipse at 80% 40%,rgba(200,164,90,.07) 0%,transparent 65%); pointer-events:none; }
-    .hero-line { position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
-    .hero-inner { position:relative; z-index:1; max-width:680px; }
-    .eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:28px; }
-    .eline { width:32px; height:1px; background:var(--gold); }
-    .hero-inner h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(42px,5.5vw,72px); font-weight:600; color:var(--white); line-height:1.1; margin-bottom:28px; }
+    .hero-bg-circles::before,.hero-bg-circles::after { content:''; position:absolute; border-radius:50%; border:1px solid rgba(201,168,92,.05); pointer-events:none; }
+    .hero-bg-circles::before { width:900px; height:900px; top:-250px; right:-250px; }
+    .hero-bg-circles::after  { width:550px; height:550px; bottom:-150px; left:-120px; }
+    .hero-glow { position:absolute; top:0; right:0; bottom:0; width:60%; background:radial-gradient(ellipse at 80% 35%,rgba(201,168,92,.06) 0%,transparent 65%); pointer-events:none; }
+    .hero-line { position:absolute; bottom:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+    .hero-inner { position:relative; z-index:1; max-width:700px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:10.5px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:26px; }
+    .eline { display:block; width:28px; height:1px; background:var(--gold); }
+    .hero-inner h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(40px,5.2vw,70px); font-weight:600; color:var(--white); line-height:1.1; margin-bottom:26px; }
     .hero-inner h1 em { color:var(--gold); font-style:normal; }
-    .hero-inner p { font-size:16px; color:rgba(255,255,255,.6); max-width:520px; margin-bottom:44px; line-height:1.85; font-weight:300; }
-    .hero-actions { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:60px; }
-    .btn-gold { background:var(--gold); color:var(--navy); padding:15px 34px; border-radius:6px; font-weight:700; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:9px; border:1.5px solid var(--gold); transition:all .25s; }
-    .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-2px); box-shadow:0 12px 30px rgba(200,164,90,.25); }
-    .btn-ghost { background:transparent; color:var(--white); padding:15px 34px; border-radius:6px; font-weight:500; font-size:14px; text-decoration:none; display:inline-flex; align-items:center; gap:9px; border:1.5px solid rgba(255,255,255,.22); transition:all .25s; }
+    .hero-inner p { font-size:15.5px; color:rgba(255,255,255,.55); max-width:530px; margin-bottom:42px; line-height:1.9; font-weight:300; }
+    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:58px; }
+    .btn-gold { background:var(--gold); color:var(--navy); padding:14px 32px; border-radius:6px; font-weight:700; font-size:13.5px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; border:1.5px solid var(--gold); transition:all .25s; letter-spacing:.3px; }
+    .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-2px); box-shadow:0 14px 32px rgba(201,168,92,.22); }
+    .btn-ghost { background:transparent; color:var(--white); padding:14px 32px; border-radius:6px; font-weight:500; font-size:13.5px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; border:1.5px solid rgba(255,255,255,.2); transition:all .25s; }
     .btn-ghost:hover { border-color:var(--gold); color:var(--gold); }
-    .hero-stats { display:flex; gap:48px; padding-top:44px; border-top:1px solid rgba(255,255,255,.08); flex-wrap:wrap; }
-    .hstat-num { font-family:'Cormorant Garamond',serif; font-size:40px; font-weight:700; color:var(--gold); line-height:1; }
-    .hstat-lbl { font-size:10.5px; color:rgba(255,255,255,.42); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px; }
+    .hero-stats { display:flex; gap:44px; padding-top:42px; border-top:1px solid rgba(255,255,255,.07); flex-wrap:wrap; }
+    .hstat-num { font-family:'Cormorant Garamond',serif; font-size:38px; font-weight:700; color:var(--gold); line-height:1; }
+    .hstat-lbl { font-size:10px; color:rgba(255,255,255,.38); letter-spacing:1.5px; text-transform:uppercase; margin-top:4px; }
 
-    /* BRAND BAR */
-    .brand-bar { background:var(--off-white); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:18px 0; overflow:hidden; }
-    .brand-inner { display:flex; align-items:center; gap:56px; animation:brandscroll 22s linear infinite; white-space:nowrap; }
+    /* ── BRAND BAR ── */
+    .brand-bar { background:var(--off-white); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:16px 0; overflow:hidden; }
+    .brand-inner { display:flex; align-items:center; gap:52px; animation:brandscroll 24s linear infinite; white-space:nowrap; }
     .brand-inner:hover { animation-play-state:paused; }
     @keyframes brandscroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-    .brand-item { display:inline-flex; align-items:center; gap:9px; font-size:11.5px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--text-3); white-space:nowrap; }
-    .brand-item i { color:var(--gold); font-size:13px; }
-    .brand-sep { color:var(--gold); font-size:9px; }
+    .brand-item { display:inline-flex; align-items:center; gap:8px; font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--text-3); white-space:nowrap; }
+    .brand-item i { color:var(--gold); font-size:12px; }
+    .brand-sep { color:var(--gold); font-size:8px; }
 
-    /* SHARED */
-    section { padding:100px 6%; }
-    .s-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:10.5px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:14px; }
-    .s-eyebrow .eline { width:26px; height:1px; background:var(--gold); }
-    .s-title { font-family:'Cormorant Garamond',serif; font-size:clamp(30px,3.5vw,48px); font-weight:600; color:var(--text); line-height:1.2; margin-bottom:14px; }
+    /* ── SHARED SECTION ── */
+    section { padding:96px 6%; }
+    .s-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+    .s-eyebrow .eline { width:22px; }
+    .s-title { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,3.2vw,46px); font-weight:600; color:var(--text); line-height:1.2; margin-bottom:12px; }
     .s-title.light { color:var(--white); }
-    .s-sub { font-size:15px; color:var(--text-3); max-width:540px; margin-bottom:56px; line-height:1.8; }
-    .s-sub.light { color:rgba(255,255,255,.52); }
+    .s-sub { font-size:15px; color:var(--text-3); max-width:540px; margin-bottom:52px; line-height:1.85; font-weight:300; }
+    .s-sub.light { color:rgba(255,255,255,.48); }
 
-    /* SERVICES */
+    /* ── SERVICES ── */
     #services { background:var(--white); }
-    .svc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--border); border:1px solid var(--border); border-radius:16px; overflow:hidden; }
-    .svc-card { background:var(--white); padding:44px 36px; transition:all .3s; position:relative; overflow:hidden; }
-    .svc-card::before { content:attr(data-num); position:absolute; top:16px; right:20px; font-family:'Cormorant Garamond',serif; font-size:54px; font-weight:700; color:rgba(200,164,90,.07); line-height:1; transition:color .3s; }
+    .svc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:16px; overflow:hidden; }
+    .svc-card { background:var(--white); padding:42px 34px; transition:all .3s; position:relative; overflow:hidden; cursor:default; }
+    .svc-card::before { content:attr(data-num); position:absolute; top:12px; right:18px; font-family:'Cormorant Garamond',serif; font-size:52px; font-weight:700; color:rgba(201,168,92,.07); line-height:1; transition:color .3s; }
     .svc-card:hover { background:var(--navy); }
-    .svc-card:hover::before { color:rgba(200,164,90,.12); }
-    .svc-icon { width:52px; height:52px; border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:22px; font-size:20px; color:var(--gold); transition:all .3s; background:var(--off-white); }
-    .svc-card:hover .svc-icon { background:rgba(200,164,90,.1); border-color:rgba(200,164,90,.25); }
-    .svc-card h3 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--text); margin-bottom:12px; line-height:1.25; transition:color .3s; }
+    .svc-card:hover::before { color:rgba(201,168,92,.11); }
+    .svc-icon { width:50px; height:50px; border:1px solid var(--border); border-radius:11px; display:flex; align-items:center; justify-content:center; margin-bottom:20px; font-size:19px; color:var(--gold); transition:all .3s; background:var(--off-white); }
+    .svc-card:hover .svc-icon { background:rgba(201,168,92,.09); border-color:rgba(201,168,92,.22); }
+    .svc-card h3 { font-family:'Cormorant Garamond',serif; font-size:21px; font-weight:600; color:var(--text); margin-bottom:10px; line-height:1.25; transition:color .3s; }
     .svc-card:hover h3 { color:var(--white); }
-    .svc-card p { font-size:13.5px; color:var(--text-3); line-height:1.78; transition:color .3s; }
-    .svc-card:hover p { color:rgba(255,255,255,.52); }
-    .svc-arrow { display:inline-flex; align-items:center; gap:6px; margin-top:18px; font-size:12px; font-weight:600; color:var(--gold); opacity:0; transform:translateY(6px); transition:all .3s; }
+    .svc-card p { font-size:13px; color:var(--text-3); line-height:1.8; transition:color .3s; margin-bottom:14px; }
+    .svc-card:hover p { color:rgba(255,255,255,.48); }
+    .svc-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:4px; }
+    .svc-tag { font-size:10.5px; font-weight:600; padding:3px 9px; border-radius:4px; background:var(--off-white); color:var(--text-3); border:1px solid var(--border); transition:all .3s; letter-spacing:.3px; }
+    .svc-card:hover .svc-tag { background:rgba(201,168,92,.1); color:var(--gold-3); border-color:rgba(201,168,92,.2); }
+    .svc-arrow { display:inline-flex; align-items:center; gap:5px; margin-top:16px; font-size:11.5px; font-weight:600; color:var(--gold); opacity:0; transform:translateY(6px); transition:all .3s; letter-spacing:.4px; }
     .svc-card:hover .svc-arrow { opacity:1; transform:translateY(0); }
 
-    /* ABOUT */
-    #about { background:var(--off-white); }
+    /* ── PROCESS ── */
+    #process { background:var(--off-white); }
+    .process-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+    .process-card { background:var(--white); border:1px solid var(--border); border-radius:14px; padding:40px 32px; position:relative; overflow:hidden; transition:box-shadow .3s, transform .3s; }
+    .process-card:hover { box-shadow:0 16px 48px rgba(0,0,0,.08); transform:translateY(-4px); }
+    .process-num { font-family:'Cormorant Garamond',serif; font-size:64px; font-weight:700; color:rgba(201,168,92,.1); line-height:1; margin-bottom:12px; }
+    .process-icon { width:52px; height:52px; background:var(--navy); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:20px; color:var(--gold); margin-bottom:18px; }
+    .process-card h4 { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; color:var(--text); margin-bottom:10px; }
+    .process-card p { font-size:13.5px; color:var(--text-3); line-height:1.8; }
+
+    /* ── ABOUT ── */
+    #about { background:var(--white); }
     .about-wrap { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
     .about-left { position:relative; }
     .about-card { background:var(--navy); border-radius:16px; padding:52px 44px; position:relative; overflow:hidden; }
-    .about-card::before { content:'"'; position:absolute; top:-30px; left:24px; font-family:'Cormorant Garamond',serif; font-size:180px; color:rgba(200,164,90,.07); line-height:1; }
-    .about-card blockquote { position:relative; z-index:1; font-family:'Cormorant Garamond',serif; font-size:22px; line-height:1.65; color:rgba(255,255,255,.85); font-style:italic; margin-bottom:28px; }
-    .about-card cite { display:flex; align-items:center; gap:12px; font-size:11.5px; color:var(--gold); letter-spacing:2px; text-transform:uppercase; font-style:normal; font-weight:600; }
-    .about-card cite::before { content:''; display:block; width:28px; height:1px; background:var(--gold); }
-    .about-badge { position:absolute; right:-24px; bottom:36px; background:var(--gold); border-radius:12px; padding:24px 28px; text-align:center; box-shadow:0 12px 36px rgba(200,164,90,.3); }
-    .about-badge .bnum { font-family:'Cormorant Garamond',serif; font-size:44px; font-weight:700; color:var(--navy); line-height:1; }
-    .about-badge .blbl { font-size:10px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:1.5px; margin-top:4px; }
-    .about-right p { font-size:15.5px; color:var(--text-2); line-height:1.85; margin-bottom:18px; }
-    .pillars { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:34px; }
-    .pillar { background:var(--white); border:1px solid var(--border); border-radius:10px; padding:22px 20px; border-left:3px solid var(--gold); transition:box-shadow .2s; }
-    .pillar:hover { box-shadow:0 8px 24px rgba(0,0,0,.07); }
-    .pillar i { font-size:17px; color:var(--gold); margin-bottom:10px; display:block; }
-    .pillar strong { display:block; font-size:14px; font-weight:700; color:var(--text); margin-bottom:4px; }
-    .pillar span { font-size:12.5px; color:var(--text-3); line-height:1.6; }
+    .about-card::before { content:'"'; position:absolute; top:-30px; left:24px; font-family:'Cormorant Garamond',serif; font-size:180px; color:rgba(201,168,92,.06); line-height:1; }
+    .about-card blockquote { position:relative; z-index:1; font-family:'Cormorant Garamond',serif; font-size:21px; line-height:1.7; color:rgba(255,255,255,.82); font-style:italic; margin-bottom:26px; }
+    .about-card cite { display:flex; align-items:center; gap:12px; font-size:11px; color:var(--gold); letter-spacing:2px; text-transform:uppercase; font-style:normal; font-weight:600; }
+    .about-card cite::before { content:''; display:block; width:24px; height:1px; background:var(--gold); }
+    .about-badge { position:absolute; right:-22px; bottom:34px; background:var(--gold); border-radius:12px; padding:22px 26px; text-align:center; box-shadow:0 12px 36px rgba(201,168,92,.28); }
+    .about-badge .bnum { font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:700; color:var(--navy); line-height:1; }
+    .about-badge .blbl { font-size:9.5px; font-weight:700; color:var(--navy); text-transform:uppercase; letter-spacing:1.5px; margin-top:4px; }
+    .about-right p { font-size:15px; color:var(--text-2); line-height:1.88; margin-bottom:16px; }
+    .pillars { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:30px; }
+    .pillar { background:var(--off-white); border:1px solid var(--border); border-radius:10px; padding:20px 18px; border-left:3px solid var(--gold); transition:box-shadow .2s; }
+    .pillar:hover { box-shadow:0 8px 24px rgba(0,0,0,.06); }
+    .pillar i { font-size:16px; color:var(--gold); margin-bottom:8px; display:block; }
+    .pillar strong { display:block; font-size:13.5px; font-weight:700; color:var(--text); margin-bottom:4px; }
+    .pillar span { font-size:12px; color:var(--text-3); line-height:1.6; }
 
-    /* WHY US */
+    /* ── WHY US ── */
     #why { background:var(--navy); position:relative; overflow:hidden; }
-    #why::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(200,164,90,.05) 0%,transparent 60%); pointer-events:none; }
-    .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-    .why-card { border:1px solid rgba(200,164,90,.1); border-radius:12px; padding:36px 28px; transition:all .3s; background:rgba(255,255,255,.02); }
-    .why-card:hover { background:rgba(200,164,90,.05); border-color:rgba(200,164,90,.28); transform:translateY(-4px); }
-    .why-icon { font-size:24px; color:var(--gold); margin-bottom:14px; }
-    .why-num { font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:700; color:rgba(200,164,90,.13); line-height:1; margin-bottom:14px; }
-    .why-card h4 { font-family:'Cormorant Garamond',serif; font-size:20px; font-weight:600; color:var(--white); margin-bottom:10px; }
-    .why-card p { font-size:13.5px; color:rgba(255,255,255,.48); line-height:1.75; }
+    #why::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(201,168,92,.05) 0%,transparent 60%); pointer-events:none; }
+    .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .why-card { border:1px solid rgba(201,168,92,.09); border-radius:12px; padding:34px 26px; transition:all .3s; background:rgba(255,255,255,.02); }
+    .why-card:hover { background:rgba(201,168,92,.05); border-color:rgba(201,168,92,.26); transform:translateY(-4px); }
+    .why-icon { font-size:22px; color:var(--gold); margin-bottom:12px; }
+    .why-num { font-family:'Cormorant Garamond',serif; font-size:46px; font-weight:700; color:rgba(201,168,92,.12); line-height:1; margin-bottom:12px; }
+    .why-card h4 { font-family:'Cormorant Garamond',serif; font-size:19px; font-weight:600; color:var(--white); margin-bottom:8px; }
+    .why-card p { font-size:13px; color:rgba(255,255,255,.44); line-height:1.78; }
 
-    /* CONTACT */
+    /* ── CONTACT ── */
     #contact { background:var(--white); }
-    .contact-wrap { display:grid; grid-template-columns:1fr 1.4fr; gap:64px; align-items:start; }
-    .cinfo-item { display:flex; gap:18px; margin-bottom:30px; }
-    .cinfo-icon { width:48px; height:48px; min-width:48px; background:var(--navy); border-radius:10px; display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:17px; }
-    .cinfo-label { font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:5px; }
-    .cinfo-val { font-size:14.5px; color:var(--text); font-weight:500; line-height:1.6; }
+    .contact-wrap { display:grid; grid-template-columns:1fr 1.4fr; gap:60px; align-items:start; }
+    .cinfo-item { display:flex; gap:16px; margin-bottom:26px; }
+    .cinfo-icon { width:46px; height:46px; min-width:46px; background:var(--navy); border-radius:9px; display:flex; align-items:center; justify-content:center; color:var(--gold); font-size:16px; }
+    .cinfo-label { font-size:9.5px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:5px; }
+    .cinfo-val { font-size:14px; color:var(--text); font-weight:500; line-height:1.6; }
     .cinfo-val a { color:var(--text); text-decoration:none; transition:color .2s; }
     .cinfo-val a:hover { color:var(--gold); }
-    .map-btn { display:inline-flex; align-items:center; gap:8px; background:var(--navy); color:var(--gold); padding:11px 20px; border-radius:7px; font-size:12px; font-weight:600; text-decoration:none; letter-spacing:.5px; margin-top:10px; transition:background .2s; white-space:nowrap; width:fit-content; }
+    .map-btn { display:inline-flex; align-items:center; gap:7px; background:var(--navy); color:var(--gold); padding:10px 18px; border-radius:7px; font-size:11.5px; font-weight:600; text-decoration:none; letter-spacing:.4px; margin-top:10px; transition:background .2s; white-space:nowrap; width:fit-content; }
     .map-btn:hover { background:var(--navy-3); }
-    .map-btn i { flex-shrink:0; }
-    .cform-box { background:var(--off-white); border:1px solid var(--border); border-radius:16px; padding:44px; box-shadow:0 20px 60px rgba(0,0,0,.06); }
-    .cform-box h3 { font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600; color:var(--text); margin-bottom:6px; }
-    .cform-sub { font-size:13.5px; color:var(--text-3); margin-bottom:26px; }
-    .frow { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-    .fg { margin-bottom:17px; }
-    .fg label { display:block; font-size:11px; font-weight:700; letter-spacing:.5px; color:var(--text); margin-bottom:7px; text-transform:uppercase; }
-    .fg input,.fg select,.fg textarea { width:100%; padding:13px 16px; border:1.5px solid var(--border); border-radius:8px; font-size:14px; color:var(--text); font-family:'Inter',sans-serif; background:var(--white); outline:none; transition:border-color .2s,box-shadow .2s; }
-    .fg input:focus,.fg select:focus,.fg textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(200,164,90,.1); }
-    .fg textarea { min-height:120px; resize:vertical; }
-    .btn-submit { width:100%; padding:15px; background:var(--navy); color:var(--gold); font-size:14px; font-weight:700; letter-spacing:.5px; border:2px solid var(--navy); border-radius:8px; cursor:pointer; font-family:'Inter',sans-serif; display:flex; align-items:center; justify-content:center; gap:10px; transition:all .25s; }
+    .cform-box { background:var(--off-white); border:1px solid var(--border); border-radius:16px; padding:42px; box-shadow:0 20px 60px rgba(0,0,0,.05); }
+    .cform-box h3 { font-family:'Cormorant Garamond',serif; font-size:27px; font-weight:600; color:var(--text); margin-bottom:5px; }
+    .cform-sub { font-size:13px; color:var(--text-3); margin-bottom:24px; }
+    .frow { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .fg { margin-bottom:15px; }
+    .fg label { display:block; font-size:10.5px; font-weight:700; letter-spacing:.4px; color:var(--text); margin-bottom:6px; text-transform:uppercase; }
+    .fg input,.fg select,.fg textarea { width:100%; padding:12px 15px; border:1.5px solid var(--border); border-radius:7px; font-size:13.5px; color:var(--text); font-family:'DM Sans',sans-serif; background:var(--white); outline:none; transition:border-color .2s,box-shadow .2s; }
+    .fg input:focus,.fg select:focus,.fg textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,168,92,.09); }
+    .fg textarea { min-height:115px; resize:vertical; }
+    .btn-submit { width:100%; padding:14px; background:var(--navy); color:var(--gold); font-size:13.5px; font-weight:700; letter-spacing:.4px; border:2px solid var(--navy); border-radius:7px; cursor:pointer; font-family:'DM Sans',sans-serif; display:flex; align-items:center; justify-content:center; gap:9px; transition:all .25s; }
     .btn-submit:hover { background:var(--gold); color:var(--navy); border-color:var(--gold); }
-    .form-ok { display:none; text-align:center; padding:20px; background:rgba(200,164,90,.08); border:1px solid rgba(200,164,90,.22); border-radius:8px; margin-top:12px; font-size:14px; color:var(--text); font-weight:500; }
+    .form-ok { display:none; text-align:center; padding:18px; background:rgba(201,168,92,.07); border:1px solid rgba(201,168,92,.2); border-radius:7px; margin-top:10px; font-size:13.5px; color:var(--text); font-weight:500; }
 
-    /* FOOTER */
-    footer { background:var(--navy); padding:64px 6% 28px; border-top:1px solid rgba(200,164,90,.14); }
-    .footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr; gap:52px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.07); margin-bottom:26px; }
-    .footer-desc { font-size:13.5px; color:rgba(255,255,255,.4); line-height:1.8; margin-top:16px; max-width:320px; }
-    .fcol-title { font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:18px; }
-    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:11px; }
-    .footer-col ul a { color:rgba(255,255,255,.45); text-decoration:none; font-size:13.5px; transition:color .2s; }
+    /* ── FOOTER ── */
+    footer { background:var(--navy); padding:60px 6% 26px; border-top:1px solid rgba(201,168,92,.12); }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:44px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,.06); margin-bottom:22px; }
+    .footer-desc { font-size:13px; color:rgba(255,255,255,.37); line-height:1.82; margin-top:14px; max-width:300px; }
+    .fcol-title { font-size:9.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:16px; }
+    .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+    .footer-col ul a { color:rgba(255,255,255,.4); text-decoration:none; font-size:13px; transition:color .2s; }
     .footer-col ul a:hover { color:var(--gold); }
-    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; }
-    .fcopy { font-size:12px; color:rgba(255,255,255,.28); }
-    .fdisc { font-size:11px; color:rgba(255,255,255,.2); max-width:520px; line-height:1.6; }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+    .fcopy { font-size:11.5px; color:rgba(255,255,255,.25); }
+    .fdisc { font-size:10.5px; color:rgba(255,255,255,.18); max-width:480px; line-height:1.6; }
 
-    /* SCROLL TOP */
-    #scrollTop { position:fixed; bottom:28px; right:28px; width:44px; height:44px; border-radius:50%; background:var(--gold); color:var(--navy); border:none; cursor:pointer; font-size:16px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(200,164,90,.35); opacity:0; transform:translateY(12px); transition:all .3s; z-index:900; }
+    /* ── SCROLL TOP ── */
+    #scrollTop { position:fixed; bottom:26px; right:26px; width:42px; height:42px; border-radius:50%; background:var(--gold); color:var(--navy); border:none; cursor:pointer; font-size:15px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px rgba(201,168,92,.32); opacity:0; transform:translateY(12px); transition:all .3s; z-index:900; }
     #scrollTop.visible { opacity:1; transform:translateY(0); }
     #scrollTop:hover { background:var(--gold-2); transform:translateY(-2px); }
 
-    /* RESPONSIVE */
-    @media(max-width:1024px) { .svc-grid,.why-grid { grid-template-columns:repeat(2,1fr); } .about-badge { right:0; } }
-    @media(max-width:900px)  { .about-wrap,.contact-wrap { grid-template-columns:1fr; } .footer-grid { grid-template-columns:1fr 1fr; } .nav-links { display:none; } .hamburger { display:flex; } }
-    @media(max-width:640px)  { section { padding:72px 5%; } .svc-grid,.why-grid { grid-template-columns:1fr; } .frow,.pillars { grid-template-columns:1fr; } .footer-grid { grid-template-columns:1fr; } .hero-actions { flex-direction:column; } .btn-gold,.btn-ghost { justify-content:center; } .hero-stats { gap:28px; } .about-badge { position:static; margin-top:20px; display:inline-block; } }
+    /* ── ANIMATIONS ── */
+    .fade-in { opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1100px) { .svc-grid,.why-grid { grid-template-columns:repeat(2,1fr); } .footer-grid { grid-template-columns:1fr 1fr; } .about-badge { right:0; } }
+    @media(max-width:900px)  { .about-wrap,.contact-wrap { grid-template-columns:1fr; } .process-grid,.testi-grid { grid-template-columns:1fr; } .nav-links { display:none; } .hamburger { display:flex; } }
+    @media(max-width:640px)  { section { padding:68px 5%; } .svc-grid,.why-grid { grid-template-columns:1fr; } .frow,.pillars { grid-template-columns:1fr; } .footer-grid { grid-template-columns:1fr; } .hero-actions { flex-direction:column; } .btn-gold,.btn-ghost { justify-content:center; } .hero-stats { gap:26px; } .about-badge { position:static; margin-top:20px; display:inline-block; } }
   </style>
 </head>
 <body>
@@ -219,6 +237,7 @@
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#process">Our Process</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#why">Why Us</a></li>
     <li><a href="#contact" class="nav-cta">Contact Us</a></li>
@@ -229,6 +248,7 @@
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#process" onclick="closeMenu()">Our Process</a>
   <a href="#about" onclick="closeMenu()">About</a>
   <a href="#why" onclick="closeMenu()">Why Us</a>
   <a href="#contact" onclick="closeMenu()">Contact Us</a>
@@ -236,13 +256,13 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg-circles"></div>
   <div class="hero-glow"></div>
   <div class="hero-line"></div>
   <div class="hero-inner">
     <div class="eyebrow"><span class="eline"></span>Chartered Accountants &middot; Bengaluru</div>
-    <h1>Trusted Financial<br/>Counsel for Every<br/><em>Business &amp; Family</em></h1>
-    <p>KPH AND ASSOCIATES delivers precise, principled, and personalised accounting, tax, and compliance services — empowering clients across Bengaluru and India to grow with confidence.</p>
+    <h1>You Focus on<br/>Growth. We Handle<br/><em>Everything Else.</em></h1>
+    <p>KPH AND ASSOCIATES delivers precise, principled, and personalised accounting, tax, compliance, and advisory services — empowering clients across Bengaluru and India to grow with confidence.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-gold"><i class="fas fa-paper-plane"></i> Free Consultation</a>
       <a href="#services" class="btn-ghost"><i class="fas fa-briefcase"></i> Our Services</a>
@@ -261,31 +281,183 @@
   <div class="brand-inner">
     <span class="brand-item"><i class="fas fa-check-circle"></i>Income Tax</span><span class="brand-sep">&#9670;</span>
     <span class="brand-item"><i class="fas fa-check-circle"></i>GST Advisory</span><span class="brand-sep">&#9670;</span>
-    <span class="brand-item"><i class="fas fa-check-circle"></i>Statutory Audit</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>Audit &amp; Assurance</span><span class="brand-sep">&#9670;</span>
     <span class="brand-item"><i class="fas fa-check-circle"></i>Company Registration</span><span class="brand-sep">&#9670;</span>
-    <span class="brand-item"><i class="fas fa-check-circle"></i>Bookkeeping</span><span class="brand-sep">&#9670;</span>
-    <span class="brand-item"><i class="fas fa-check-circle"></i>TDS Compliance</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>Compliance Management</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>Corporate Advisory</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>Transfer Pricing</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>TDS / TCS</span><span class="brand-sep">&#9670;</span>
     <span class="brand-item"><i class="fas fa-check-circle"></i>Income Tax</span><span class="brand-sep">&#9670;</span>
     <span class="brand-item"><i class="fas fa-check-circle"></i>GST Advisory</span><span class="brand-sep">&#9670;</span>
-    <span class="brand-item"><i class="fas fa-check-circle"></i>Statutory Audit</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>Audit &amp; Assurance</span><span class="brand-sep">&#9670;</span>
     <span class="brand-item"><i class="fas fa-check-circle"></i>Company Registration</span><span class="brand-sep">&#9670;</span>
-    <span class="brand-item"><i class="fas fa-check-circle"></i>Bookkeeping</span><span class="brand-sep">&#9670;</span>
-    <span class="brand-item"><i class="fas fa-check-circle"></i>TDS Compliance</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>Compliance Management</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>Corporate Advisory</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>Transfer Pricing</span><span class="brand-sep">&#9670;</span>
+    <span class="brand-item"><i class="fas fa-check-circle"></i>TDS / TCS</span><span class="brand-sep">&#9670;</span>
   </div>
 </div>
 
 <!-- SERVICES -->
 <section id="services">
   <div class="s-eyebrow"><span class="eline"></span>What We Offer</div>
-  <h2 class="s-title">Comprehensive CA Services</h2>
-  <p class="s-sub">End-to-end financial and compliance services tailored for individuals, startups, SMEs, and corporates across India.</p>
+  <h2 class="s-title">Full Range of CA &amp; Advisory Services</h2>
+  <p class="s-sub">End-to-end financial, compliance, and advisory services tailored for individuals, startups, SMEs, and corporates across India.</p>
   <div class="svc-grid">
-    <div class="svc-card" data-num="01"><div class="svc-icon"><i class="fas fa-file-invoice-dollar"></i></div><h3>Income Tax Filing &amp; Planning</h3><p>Strategic tax planning and timely ITR filing for individuals, HUFs, firms, and companies to minimise liability and ensure full Income Tax Act compliance.</p><div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div></div>
-    <div class="svc-card" data-num="02"><div class="svc-icon"><i class="fas fa-receipt"></i></div><h3>GST Registration &amp; Returns</h3><p>Complete GST lifecycle management — registration, GSTR-1, GSTR-3B, reconciliation, ITC advisory, and expert guidance on the latest GST law changes.</p><div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div></div>
-    <div class="svc-card" data-num="03"><div class="svc-icon"><i class="fas fa-search-dollar"></i></div><h3>Audit &amp; Assurance</h3><p>Statutory audits, internal audits, tax audits u/s 44AB, and concurrent audits conducted with independence, rigour, and professional integrity.</p><div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div></div>
-    <div class="svc-card" data-num="04"><div class="svc-icon"><i class="fas fa-building"></i></div><h3>Company Registration &amp; ROC</h3><p>Private Limited, LLP, OPC, and Partnership incorporation; ROC annual filings, DIR-3 KYC, AOC-4, MGT-7, and complete secretarial compliance.</p><div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div></div>
-    <div class="svc-card" data-num="05"><div class="svc-icon"><i class="fas fa-book-open"></i></div><h3>Accounting &amp; Bookkeeping</h3><p>Accurate day-to-day bookkeeping, financial statement preparation, MIS reports, payroll processing, and management accounts for all business sizes.</p><div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div></div>
-    <div class="svc-card" data-num="06"><div class="svc-icon"><i class="fas fa-percent"></i></div><h3>TDS / TCS Compliance</h3><p>End-to-end TDS/TCS management: deduction calculation, payment challan, quarterly e-return filing, Form 16/16A issuance, and TRACES reconciliation.</p><div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div></div>
+
+    <div class="svc-card fade-in" data-num="01">
+      <div class="svc-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+      <h3>Income Tax Filing &amp; Planning</h3>
+      <p>Strategic tax planning and timely ITR filing to minimise liability and ensure full compliance with the Income Tax Act.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">ITR Filing</span>
+        <span class="svc-tag">Tax Planning</span>
+        <span class="svc-tag">Assessments</span>
+        <span class="svc-tag">Litigations</span>
+        <span class="svc-tag">Advance Tax</span>
+      </div>
+      <div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div>
+    </div>
+
+    <div class="svc-card fade-in" data-num="02">
+      <div class="svc-icon"><i class="fas fa-receipt"></i></div>
+      <h3>GST Registration &amp; Advisory</h3>
+      <p>Complete GST lifecycle management — from registration and return filing to ITC advisory and expert guidance on law changes.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">GSTR-1 / 3B</span>
+        <span class="svc-tag">ITC Advisory</span>
+        <span class="svc-tag">E-Way Bill</span>
+        <span class="svc-tag">Reconciliation</span>
+        <span class="svc-tag">GST Audit</span>
+      </div>
+      <div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div>
+    </div>
+
+    <div class="svc-card fade-in" data-num="03">
+      <div class="svc-icon"><i class="fas fa-search-dollar"></i></div>
+      <h3>Audit &amp; Assurance</h3>
+      <p>Independent audits conducted with rigour and professional integrity to enhance transparency, governance, and stakeholder trust.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Statutory Audit</span>
+        <span class="svc-tag">Tax Audit u/s 44AB</span>
+        <span class="svc-tag">Internal Audit</span>
+        <span class="svc-tag">Risk Management</span>
+        <span class="svc-tag">Concurrent Audit</span>
+      </div>
+      <div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div>
+    </div>
+
+    <div class="svc-card fade-in" data-num="04">
+      <div class="svc-icon"><i class="fas fa-book-open"></i></div>
+      <h3>Accounting &amp; Outsourcing</h3>
+      <p>Streamline financial operations with expert bookkeeping, payroll management, MIS reporting, and financial statement preparation.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Bookkeeping</span>
+        <span class="svc-tag">Payroll</span>
+        <span class="svc-tag">AR / AP</span>
+        <span class="svc-tag">MIS Reports</span>
+        <span class="svc-tag">Financial Statements</span>
+      </div>
+      <div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div>
+    </div>
+
+    <div class="svc-card fade-in" data-num="05">
+      <div class="svc-icon"><i class="fas fa-shield-alt"></i></div>
+      <h3>Compliance Management</h3>
+      <p>Navigate complex regulatory landscapes with expert TDS/TCS management, GST filings, RBI/STPI compliance, and corporate reporting.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">TDS / TCS</span>
+        <span class="svc-tag">RBI Compliance</span>
+        <span class="svc-tag">STPI / Customs</span>
+        <span class="svc-tag">Corporate Reporting</span>
+        <span class="svc-tag">FEMA</span>
+      </div>
+      <div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div>
+    </div>
+
+    <div class="svc-card fade-in" data-num="06">
+      <div class="svc-icon"><i class="fas fa-building"></i></div>
+      <h3>Company Registration &amp; ROC</h3>
+      <p>Private Limited, LLP, OPC, and Partnership incorporation with complete secretarial compliance and ROC annual filings.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Pvt Ltd / LLP</span>
+        <span class="svc-tag">ROC Filings</span>
+        <span class="svc-tag">DIR-3 KYC</span>
+        <span class="svc-tag">MGT-7 / AOC-4</span>
+        <span class="svc-tag">Secretarial</span>
+      </div>
+      <div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div>
+    </div>
+
+    <div class="svc-card fade-in" data-num="07">
+      <div class="svc-icon"><i class="fas fa-globe"></i></div>
+      <h3>Taxation Advisory</h3>
+      <p>Expert guidance on direct and indirect tax, international taxation, transfer pricing, customs, and tax optimisation strategies.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">Transfer Pricing</span>
+        <span class="svc-tag">International Tax</span>
+        <span class="svc-tag">Customs</span>
+        <span class="svc-tag">Tax Structuring</span>
+        <span class="svc-tag">Tax Optimisation</span>
+      </div>
+      <div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div>
+    </div>
+
+    <div class="svc-card fade-in" data-num="08">
+      <div class="svc-icon"><i class="fas fa-chart-line"></i></div>
+      <h3>Corporate Advisory</h3>
+      <p>Navigate critical business decisions with expert corporate strategy, restructuring, M&amp;A advisory, and due diligence support.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">M&amp;A Advisory</span>
+        <span class="svc-tag">Due Diligence</span>
+        <span class="svc-tag">Restructuring</span>
+        <span class="svc-tag">Business Valuation</span>
+        <span class="svc-tag">Strategy</span>
+      </div>
+      <div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div>
+    </div>
+
+    <div class="svc-card fade-in" data-num="09">
+      <div class="svc-icon"><i class="fas fa-cogs"></i></div>
+      <h3>Specialised Business Support</h3>
+      <p>Specialised solutions for business growth — MSME registration, startup advisory, project finance, and management consulting.</p>
+      <div class="svc-tags">
+        <span class="svc-tag">MSME Registration</span>
+        <span class="svc-tag">Startup Advisory</span>
+        <span class="svc-tag">Project Finance</span>
+        <span class="svc-tag">Liaison Services</span>
+        <span class="svc-tag">MIS &amp; Reporting</span>
+      </div>
+      <div class="svc-arrow"><i class="fas fa-arrow-right"></i> Learn more</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="s-eyebrow"><span class="eline"></span>How We Work</div>
+  <h2 class="s-title">Our Work Process</h2>
+  <p class="s-sub">A structured, client-centred approach to delivering consistent, high-quality outcomes every time.</p>
+  <div class="process-grid">
+    <div class="process-card fade-in">
+      <div class="process-num">01</div>
+      <div class="process-icon"><i class="fas fa-comments"></i></div>
+      <h4>Consultation</h4>
+      <p>We begin with a comprehensive assessment to understand your business needs, financial position, and compliance obligations — at no cost.</p>
+    </div>
+    <div class="process-card fade-in">
+      <div class="process-num">02</div>
+      <div class="process-icon"><i class="fas fa-drafting-compass"></i></div>
+      <h4>Planning &amp; Strategy</h4>
+      <p>We develop personalised strategies for accounting, tax, and compliance — precisely aligned with your unique business goals and risk profile.</p>
+    </div>
+    <div class="process-card fade-in">
+      <div class="process-num">03</div>
+      <div class="process-icon"><i class="fas fa-rocket"></i></div>
+      <h4>Execution &amp; Results</h4>
+      <p>Seamless implementation with ongoing expert support — optimising your financial operations and keeping you compliant at every stage.</p>
+    </div>
   </div>
 </section>
 
@@ -301,13 +473,13 @@
     </div>
     <div class="about-right">
       <div class="s-eyebrow"><span class="eline"></span>About Us</div>
-      <h2 class="s-title">Integrity, Expertise &amp; Dedication</h2>
-      <p>KPH AND ASSOCIATES is a Bengaluru-based Chartered Accountant firm combining deep technical knowledge with a genuinely client-first approach. We serve individuals, startups, growing SMEs, and large enterprises.</p>
-      <p>Our ICAI-registered professionals stay current with every regulatory change, ensuring your business remains compliant, efficient, and financially strong — at every stage of growth.</p>
+      <h2 class="s-title">Committed to Excellence &amp; Client Success</h2>
+      <p>KPH AND ASSOCIATES is a Bengaluru-based Chartered Accountant firm combining deep technical expertise with a genuinely client-first approach. We serve individuals, startups, growing SMEs, and large enterprises.</p>
+      <p>Our ICAI-registered professionals stay current with every regulatory change, ensuring your business remains compliant, efficient, and financially strong — at every stage of growth. We build lasting relationships on trust, transparency, and respect.</p>
       <div class="pillars">
         <div class="pillar"><i class="fas fa-shield-alt"></i><strong>Integrity</strong><span>Highest ethical standards in every engagement, without compromise.</span></div>
-        <div class="pillar"><i class="fas fa-lightbulb"></i><strong>Expert Insight</strong><span>Decades of combined expertise across tax, audit, and advisory.</span></div>
-        <div class="pillar"><i class="fas fa-handshake"></i><strong>Client-First</strong><span>Personalised solutions built around your unique financial goals.</span></div>
+        <div class="pillar"><i class="fas fa-lightbulb"></i><strong>Expert Insight</strong><span>Deep combined expertise across tax, audit, and advisory services.</span></div>
+        <div class="pillar"><i class="fas fa-handshake"></i><strong>Client-First</strong><span>360° tailored solutions built around your unique financial goals.</span></div>
         <div class="pillar"><i class="fas fa-clock"></i><strong>On-Time Delivery</strong><span>We respect deadlines — your compliance never slips with us.</span></div>
       </div>
     </div>
@@ -320,12 +492,12 @@
   <h2 class="s-title light">What Sets KPH AND ASSOCIATES Apart</h2>
   <p class="s-sub light">We are more than accountants — we are your long-term financial growth partners.</p>
   <div class="why-grid">
-    <div class="why-card"><div class="why-icon"><i class="fas fa-certificate"></i></div><div class="why-num">01</div><h4>ICAI Qualified Professionals</h4><p>All our CAs hold active ICAI membership with continuous professional development, ensuring you receive expert, up-to-date advice.</p></div>
-    <div class="why-card"><div class="why-icon"><i class="fas fa-map-marker-alt"></i></div><div class="why-num">02</div><h4>Bengaluru-Based Presence</h4><p>Conveniently located in Banashankari, easily accessible for in-person consultations, with remote services available pan-India.</p></div>
-    <div class="why-card"><div class="why-icon"><i class="fas fa-lock"></i></div><div class="why-num">03</div><h4>Strict Data Confidentiality</h4><p>Your financial information is handled with the highest level of security, discretion, and confidentiality at all times.</p></div>
-    <div class="why-card"><div class="why-icon"><i class="fas fa-rupee-sign"></i></div><div class="why-num">04</div><h4>Transparent Pricing</h4><p>Clear, upfront fee structures with no hidden charges — delivering genuine value for every rupee you invest in our services.</p></div>
-    <div class="why-card"><div class="why-icon"><i class="fas fa-headset"></i></div><div class="why-num">05</div><h4>Dedicated Support</h4><p>Quick turnaround times and responsive communication — we address your queries and concerns with urgency and care.</p></div>
-    <div class="why-card"><div class="why-icon"><i class="fas fa-sync-alt"></i></div><div class="why-num">06</div><h4>Proactive Regulatory Updates</h4><p>We proactively monitor Income Tax, GST, and MCA changes — keeping you ahead of every compliance deadline.</p></div>
+    <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-certificate"></i></div><div class="why-num">01</div><h4>ICAI Qualified Professionals</h4><p>All our CAs hold active ICAI membership with continuous professional development, ensuring expert, up-to-date advice.</p></div>
+    <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-map-marker-alt"></i></div><div class="why-num">02</div><h4>Bengaluru-Based Presence</h4><p>Located in Banashankari for easy in-person consultations, with remote services available pan-India.</p></div>
+    <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-lock"></i></div><div class="why-num">03</div><h4>Strict Data Confidentiality</h4><p>Your financial information is handled with the highest level of security, discretion, and confidentiality at all times.</p></div>
+    <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-rupee-sign"></i></div><div class="why-num">04</div><h4>Transparent Pricing</h4><p>Clear, upfront fee structures with no hidden charges — delivering genuine value for every rupee invested.</p></div>
+    <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-headset"></i></div><div class="why-num">05</div><h4>Dedicated Support</h4><p>Quick turnaround and responsive communication — we address your queries with urgency and care.</p></div>
+    <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-sync-alt"></i></div><div class="why-num">06</div><h4>Proactive Regulatory Updates</h4><p>We proactively monitor Income Tax, GST, and MCA changes — keeping you ahead of every compliance deadline.</p></div>
   </div>
 </section>
 
@@ -350,7 +522,21 @@
           <div class="fg"><label>Phone *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required/></div>
         </div>
         <div class="fg"><label>Email Address *</label><input type="email" name="email" placeholder="your@email.com" required/></div>
-        <div class="fg"><label>Service Required</label><select name="service"><option value="">Select a service…</option><option>Income Tax Filing &amp; Planning</option><option>GST Registration &amp; Returns</option><option>Audit &amp; Assurance</option><option>Company Registration &amp; ROC</option><option>Accounting &amp; Bookkeeping</option><option>TDS / TCS Compliance</option><option>Other</option></select></div>
+        <div class="fg"><label>Service Required</label>
+          <select name="service">
+            <option value="">Select a service…</option>
+            <option>Income Tax Filing &amp; Planning</option>
+            <option>GST Registration &amp; Advisory</option>
+            <option>Audit &amp; Assurance</option>
+            <option>Accounting &amp; Outsourcing</option>
+            <option>Compliance Management</option>
+            <option>Company Registration &amp; ROC</option>
+            <option>Taxation Advisory</option>
+            <option>Corporate Advisory</option>
+            <option>Specialised Business Support</option>
+            <option>Other</option>
+          </select>
+        </div>
         <div class="fg"><label>Message *</label><textarea name="message" placeholder="Describe your requirement…" required></textarea></div>
         <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
         <div class="form-ok" id="formSuccess"><i class="fas fa-check-circle" style="color:var(--gold);font-size:22px;display:block;margin-bottom:8px"></i>Thank you! Your message has been sent. We'll get back to you within 24 hours.</div>
@@ -368,10 +554,30 @@
         <div class="logo-text"><div class="firm-name">KPH AND ASSOCIATES</div><div class="firm-sub">Chartered Accountants</div></div>
         <img src="ca-india-logo.svg" alt="CA India" class="icai-nav"/>
       </div>
-      <p class="footer-desc">Trusted financial and compliance services for individuals and businesses in Bengaluru and across India. ICAI registered Chartered Accountants, committed to your growth.</p>
+      <p class="footer-desc">Trusted financial and compliance services for individuals and businesses in Bengaluru and across India. ICAI registered Chartered Accountants committed to your growth.</p>
     </div>
-    <div class="footer-col"><div class="fcol-title">Services</div><ul><li><a href="#services">Income Tax Filing</a></li><li><a href="#services">GST Compliance</a></li><li><a href="#services">Audit &amp; Assurance</a></li><li><a href="#services">Company Registration</a></li><li><a href="#services">Accounting &amp; Books</a></li><li><a href="#services">TDS / TCS Returns</a></li></ul></div>
-    <div class="footer-col"><div class="fcol-title">Quick Links</div><ul><li><a href="#hero">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#why">Why Us</a></li><li><a href="#contact">Contact</a></li><li><a href="mailto:contact@kphassociates.com">Email Us</a></li><li><a href="tel:+919901934493">Call Us</a></li></ul></div>
+    <div class="footer-col"><div class="fcol-title">Core Services</div><ul>
+      <li><a href="#services">Income Tax Filing</a></li>
+      <li><a href="#services">GST Compliance</a></li>
+      <li><a href="#services">Audit &amp; Assurance</a></li>
+      <li><a href="#services">Accounting &amp; Outsourcing</a></li>
+      <li><a href="#services">Compliance Management</a></li>
+    </ul></div>
+    <div class="footer-col"><div class="fcol-title">Advisory Services</div><ul>
+      <li><a href="#services">Taxation Advisory</a></li>
+      <li><a href="#services">Corporate Advisory</a></li>
+      <li><a href="#services">Transfer Pricing</a></li>
+      <li><a href="#services">Company Registration</a></li>
+      <li><a href="#services">Specialised Support</a></li>
+    </ul></div>
+    <div class="footer-col"><div class="fcol-title">Quick Links</div><ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="mailto:contact@kphassociates.com">Email Us</a></li>
+      <li><a href="tel:+919901934493">Call Us</a></li>
+    </ul></div>
   </div>
   <div class="footer-bottom">
     <p class="fcopy">© 2025 KPH AND ASSOCIATES. All rights reserved.</p>
@@ -382,7 +588,7 @@
 <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"><i class="fas fa-chevron-up"></i></button>
 
 <script>
-  const navbar  = document.getElementById('navbar');
+  const navbar = document.getElementById('navbar');
   const scrollBtn = document.getElementById('scrollTop');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
@@ -391,44 +597,34 @@
   function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
   function closeMenu()  { document.getElementById('mobileMenu').classList.remove('open'); }
 
+  // Intersection Observer for fade-in
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+  // Contact form
   async function handleSubmit(e) {
     e.preventDefault();
     const form = e.target, btn = form.querySelector('.btn-submit'), succ = document.getElementById('formSuccess');
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…'; btn.disabled = true;
-
     const FORMSPREE_ID = 'mpqywbab';
-
     if (FORMSPREE_ID === 'YOUR_FORM_ID') {
-      // Fallback: open email client with form data pre-filled
-      const name    = form.querySelector('[name="name"]').value;
-      const phone   = form.querySelector('[name="phone"]').value;
-      const email   = form.querySelector('[name="email"]').value;
-      const service = form.querySelector('[name="service"]').value;
-      const message = form.querySelector('[name="message"]').value;
-      const subject = encodeURIComponent('Enquiry from ' + name + ' – KPH AND ASSOCIATES Website');
-      const body    = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Phone: ' + phone + '\n' +
-        'Email: ' + email + '\n' +
-        'Service: ' + service + '\n\n' +
-        'Message:\n' + message
-      );
-      window.location.href = 'mailto:contact@kphassociates.com?subject=' + subject + '&body=' + body;
-      setTimeout(() => { form.reset(); succ.style.display='block'; btn.style.display='none'; }, 800);
+      const n=form.querySelector('[name="name"]').value, p=form.querySelector('[name="phone"]').value,
+            em=form.querySelector('[name="email"]').value, sv=form.querySelector('[name="service"]').value,
+            mg=form.querySelector('[name="message"]').value;
+      const sub=encodeURIComponent('Enquiry from '+n+' – KPH AND ASSOCIATES Website');
+      const body=encodeURIComponent('Name: '+n+'\nPhone: '+p+'\nEmail: '+em+'\nService: '+sv+'\n\nMessage:\n'+mg);
+      window.location.href='mailto:contact@kphassociates.com?subject='+sub+'&body='+body;
+      setTimeout(()=>{ form.reset(); succ.style.display='block'; btn.style.display='none'; },800);
       return;
     }
-
     try {
-      const res = await fetch('https://formspree.io/f/' + FORMSPREE_ID, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
-      if (res.ok) { form.reset(); succ.style.display='block'; btn.style.display='none'; }
-      else { const j = await res.json(); btn.innerHTML='<i class="fas fa-exclamation-circle"></i> '+(j.errors?j.errors.map(x=>x.message).join(', '):'Error, try again.'); btn.disabled=false; }
+      const res = await fetch('https://formspree.io/f/'+FORMSPREE_ID,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+      if(res.ok){ form.reset(); succ.style.display='block'; btn.style.display='none'; }
+      else { const j=await res.json(); btn.innerHTML='<i class="fas fa-exclamation-circle"></i> '+(j.errors?j.errors.map(x=>x.message).join(', '):'Error, try again.'); btn.disabled=false; }
     } catch { btn.innerHTML='<i class="fas fa-exclamation-circle"></i> Network error. Try again.'; btn.disabled=false; }
   }
-
-  const io = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='translateY(0)';} }), {threshold:0.08});
-  document.querySelectorAll('.svc-card,.why-card,.cinfo-item,.pillar').forEach(el => {
-    el.style.opacity='0'; el.style.transform='translateY(20px)'; el.style.transition='opacity .55s ease,transform .55s ease'; io.observe(el);
-  });
 
   // Live Ticker
   const RSS2JSON='https://api.rss2json.com/v1/api.json?num=8&rss_url=';
